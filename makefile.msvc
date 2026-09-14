@@ -1,0 +1,10 @@
+all:
+	cl /EHsc /LD /Iinclude src\gronsfeldcipher.cpp /Fe:bin\gronsfeldcipher.dll
+	cl /EHsc /LD /Iinclude src\railfence.cpp /Fe:bin\railfencecipher.dll
+	cl /EHsc /Iinclude src\main.cpp src\pluginloader.cpp src\keygenerator.cpp /Fe:bin\main.exe
+	-del *.obj
+	-del *.exp
+	-del *.lib
+	-del bin\*.obj
+	-del bin\*.exp
+	-del bin\*.lib
